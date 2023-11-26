@@ -1,0 +1,1 @@
+# Laundromat_machine_availability_script
