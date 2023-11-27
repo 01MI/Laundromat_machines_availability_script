@@ -1,10 +1,10 @@
 # Laundromat machines availability script with cron jobs and a discord application 
 
-Some laundromats allow you to retrieve machines status via their public gad.touchnpay.fr page.
-This script retrieve machines status via the API, if needed creates cron jobs to periodically check the status and sends a discord notification when a machine is available.
+Some laundromats allow you to retrieve machines status via their public gad.touchnpay.fr page.\
+This script retrieve machines status via the API, if needed creates cron jobs to periodically check the status and sends a discord notification when a machine is available.\
 This script is useful, if like me, your residence has a laundromat with few machines and uses this application. Useful during weekends.
 
-Example:
+Example:\
 ![machines](https://github.com/01MI/Laundromat_machines_availability_script/assets/151965188/368e0e04-7f4e-4aa4-8950-2e013b079618)
 
 ## Prerequisites
@@ -19,7 +19,8 @@ CHANNEL_ID = id of your discord channel (enable developer mode in advanced setti
 MINUTES = will be use to set the cron job to check periodically when the machine has finished.
 ```
 
-In my case, the time for a cycle given by the application is not accurate so I need to add ~10 min, so my DELTA_ESTIMATE = 10. After the machine has finished, I want the cron job to check every 5minutes, so MINUTES = 5
+In my case, the time for a cycle given by the application is not accurate so I need to add ~10 min, so my DELTA_ESTIMATE = 10.\
+After the machine has finished, I want the cron job to check every 5minutes, so MINUTES = 5
 
 ## Usage
 
