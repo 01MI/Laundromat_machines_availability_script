@@ -1,5 +1,6 @@
 # Laundromat machines availability script with cron jobs and a discord application 
 
+## Context
 Some laundromats allow you to retrieve machines status via their public gad.touchnpay.fr page.  
 
 This script retrieve machines status via the API, if needed, creates cron jobs to periodically check the status and sends a discord notification when a machine is available.  
