@@ -23,10 +23,10 @@ Example of the different states of a machine:
 ```
 TOKEN = Discord bot token (Developper portal -> Applications -> Bot)
 LAUNDROMAT_ID = Id after gad.touchnpay.fr/fr/public/material/
-DELTA_ESTIMATE = Minutes to add to the machine time cycle.
+DELTA_ESTIMATE = Time in minutes to add to the machine time cycle.
 CHANNEL_ID = Id of your discord channel (enable developer mode in advanced settings on your profile, right click on a channel, copy id)
-MINUTES = Time to periodically check if the machines are still busy but their cycles is over.
-TIMEOUT_MENU = Time to select your machine from the drop-down menu.
+MINUTES = Time in minutes to periodically check if the machines are still busy but their cycles is over.
+TIMEOUT_MENU = Time in seconds to select your machine from the drop-down menu.
 ```
 
 In my case, the time for a cycle given by the application is not accurate so I need to add ~10 min, so my DELTA_ESTIMATE = 10  
