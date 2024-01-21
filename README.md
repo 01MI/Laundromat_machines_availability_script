@@ -36,7 +36,7 @@ If a machine's cycle has ended but it's still not available, I want the cron job
 
 Launch the main script:
 ```bash
-python3 main.py
+python3 src/main.py
 ```
 
 * You can check all available commands with '!help'.
