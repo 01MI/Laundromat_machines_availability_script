@@ -45,8 +45,8 @@ python3 main.py
 If there is at least one available machine, the script will return the name of the machine and display a drop-down menu for you to select the machine you want to use, remove the cron jobs or stop the bot.  
    <table>
    <tr>
-      <td valign="top"><img src="https://github.com/01MI/Laundromat_machines_availability_script/assets/151965188/baceeb66-7eba-4482-b47d-8b27861a6360" width="400"></td>
-      <td valign="top"><img src="https://github.com/01MI/Laundromat_machines_availability_script/assets/151965188/781ee580-4396-4d37-aec4-3096c9923d01" width="400"></td>
+      <td valign="top"><img src="https://github.com/01MI/Laundromat_machines_availability_script/assets/151965188/96c7c6bc-cb65-4941-bc48-31333573b08f" width="400"></td>
+      <td valign="top"><img src="https://github.com/01MI/Laundromat_machines_availability_script/assets/151965188/d42fcd32-efcf-4fc6-8d39-52f5bcd5a0eb" width="400"></td>
    </tr>
    </table>
 
@@ -55,12 +55,12 @@ If there is at least one available machine, the script will return the name of t
    2. If the machines haven't finished, cron jobs will be created and launch on the estimate end date.  
    <table>
    <tr>
-      <td valign="top"><img src="https://github.com/01MI/Laundromat_machines_availability_script/assets/151965188/fa2b82aa-a5aa-4058-9898-ec6bc85c7c76" width="400"></td>
+      <td valign="top"><img src="https://github.com/01MI/Laundromat_machines_availability_script/assets/151965188/dc25711b-c5d1-407e-9511-8709270126e6" width="400"></td>
       <td valign="top"><img src="https://github.com/01MI/Laundromat_machines_availability_script/assets/151965188/b4be204e-0829-4c28-bc06-cb0c99512b3a" width="400"></td>
    </tr>
    </table>
-
-* If you only want to check the end dates of the machines without creating any cron jobs, use '!dates'  
+   
+* If you only want to check the end dates of the machines without creating any cron jobs, use '!dates':
   <img src="https://github.com/01MI/Laundromat_machines_availability_script/assets/151965188/8ad1c051-1d5f-4e4e-a9a1-b1e19e8e4e12" width="250">
 
 * If you have already dropped of your laundry and want to select a machine, use '!machines' to display the drop-down menu:  
