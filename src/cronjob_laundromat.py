@@ -14,7 +14,7 @@ async def on_ready():
     list_machines_dates = list(cron_job.find_comment(comment=re.compile(r'{}_\d+'.format("mal"))))
     if len(available_machines) != 0:
         clean()
-        await client.get_channel(int(os.getenv("CHANNEL_ID"))).send("Here are the available machines (o˘◡˘o): " + str(available_machines))
+        await client.get_channel(int(os.getenv("CHANNEL_ID"))).send("Here are the available machines: " + str(available_machines))
         view=SelectView()
         await client.get_channel(int(os.getenv("CHANNEL_ID"))).send("""
         -----------------------------\nIn which machine did you put your laundry in?\nPlease select the machine AFTER dropping off your laundry
@@ -29,7 +29,7 @@ async def on_ready():
                     cron_job.remove(job)
             cron_job.write()
         if sys.argv[1] == "9999":
-            await client.get_channel(int(os.getenv("CHANNEL_ID"))).send("🔴 Cycle over! Please go pick up your laundry \(⌒▽⌒) 🔴")
+            await client.get_channel(int(os.getenv("CHANNEL_ID"))).send("🔴 Cycle over! Please go pick up your laundry 🔴")
             exit()
         else:
             cron_job.remove_all(comment='{0}min'.format(minutes))
