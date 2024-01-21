@@ -192,7 +192,7 @@ async def free(ctx):
     available_machines, unavailable_machines = get_available()
     if len(available_machines) != 0:
         clean()
-        await client.get_channel(int(os.getenv("CHANNEL_ID"))).send("Here are the available machines (o˘◡˘o): " + str(available_machines))
+        await client.get_channel(int(os.getenv("CHANNEL_ID"))).send("Here are the available machines: " + str(available_machines))
         await machines(ctx)
         
     elif len(list_machines_min) >= 1 or len(list_machines_dates) >= 1:
@@ -210,7 +210,7 @@ async def free(ctx):
             await client.get_channel(int(os.getenv("CHANNEL_ID"))).send(machine_msg)
 
     else:
-        await client.get_channel(int(os.getenv("CHANNEL_ID"))).send("There are no machines available. I'm creating the cron jobs ヽ(￣～￣ )/")
+        await client.get_channel(int(os.getenv("CHANNEL_ID"))).send("There are no machines available. I'm creating the cron jobs")
         machines_msg_dates = busy_machines(unavailable_machines)
         for machine_msg in machines_msg_dates:
             await client.get_channel(int(os.getenv("CHANNEL_ID"))).send(machine_msg)
@@ -247,7 +247,7 @@ async def stop_bot(ctx):
     Control command of the Discord bot.
     Remove all cron jobs and disconnect the bot.
     """
-    await ctx.send("Removing the laundromat cron jobs and disconnecting \(￣▽￣)/ ")
+    await ctx.send("Removing the laundromat cron jobs and disconnecting")
     clean()
     exit()
 
@@ -257,7 +257,7 @@ async def remove_jobs(ctx):
     Control command of the Discord bot.
     Remove all cron jobs.
     """
-    await ctx.send("Removing the laundromat cron jobs \(￣▽￣)/ ")
+    await ctx.send("Removing the laundromat cron jobs")
     clean()
 
 if __name__ == '__main__':
