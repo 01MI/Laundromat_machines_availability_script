@@ -1,11 +1,12 @@
 # Laundromat machines availability script with cron jobs and a discord application 
 
 ## Context
-Some laundromats allow you to retrieve machines status via their public gad.touchnpay.fr page.  
+Some laundromats allow you to retrieve the status of machines via their public gad.touchnpay.fr page.
+This script is useful on weekends, especially if, like me, your residence has a laundromat with few machines and uses this web application.
 
-This script retrieve machines status via the API, if needed, creates cron jobs to periodically check the status and sends a discord notification when a machine is available.  
-If a machine is available, a drop-down menu will be displayed. You can choose your machine after dropping of your laundry, then, a new cronjob will be created to notify you when to pick up your laundry.  
-This script is useful during weekends, if like me, your residence has a laundromat with few machines and uses this application.
+This script retrieves machines statuses through the API and, if needed, creates cron jobs to periodically check the status and send a discord notification when a machine is available.  
+If a machine is available, a drop-down menu will be displayed. You can choose your machine after dropping off your laundry, then a new cronjob will be created to notify you when to pick up your laundry.  
+
 
 Example of the different states of a machine:  
 <table>
@@ -18,8 +19,11 @@ Example of the different states of a machine:
 
 ## Prerequisites
 1. You will need to install the dependencies specified in requirements.txt
+```
+pip3 install -r requirements.txt
+```
 
-2. You will need to create a .env file with the following informations:
+3. You will need to create a .env file with the following information:
 ```
 TOKEN = Discord bot token (Developper portal -> Applications -> Bot)
 LAUNDROMAT_ID = Id after gad.touchnpay.fr/fr/public/material/
@@ -51,7 +55,7 @@ If there is at least one available machine, the script will return the name of t
    </table>
 
    If no machines are available, it will create cron jobs and send you the ends dates of the machines:
-   1. If the machines have finished but are not availables, one cron job will be created and launched every X minutes (MINUTES var in the .env file).
+   1. If the machines have finished but are not available, one cron job will be created and launched every X minutes (MINUTES var in the .env file).
    2. If the machines haven't finished, cron jobs will be created and launch on the estimate end date.  
    <table>
    <tr>
@@ -63,7 +67,7 @@ If there is at least one available machine, the script will return the name of t
 * If you only want to check the end dates of the machines without creating any cron jobs, use '!dates':
   <img src="https://github.com/01MI/Laundromat_machines_availability_script/assets/151965188/8ad1c051-1d5f-4e4e-a9a1-b1e19e8e4e12" width="250">
 
-* If you have already dropped of your laundry and want to select a machine, use '!machines' to display the drop-down menu:  
+* If you have already dropped off your laundry and want to select a machine, use '!machines' to display the drop-down menu:  
    <table>
    <tr>
       <td valign="top"><img src="https://github.com/01MI/Laundromat_machines_availability_script/assets/151965188/f7e6ba1b-329c-442f-a00a-d9f95eec7115" width="350"></td>
@@ -72,16 +76,7 @@ If there is at least one available machine, the script will return the name of t
    </table>
   
 * To remove all cron jobs, use '!remove_jobs'.  
-  To stop the bot and remove all cron jobs, use "!stop_bot":  
-
-
-You can check the cron jobs with the command:  
-```bash
-crontab -l
-```
-
-## To do
-
+  To stop the bot and remove all cron jobs, use "!stop_bot":
 
 
 
