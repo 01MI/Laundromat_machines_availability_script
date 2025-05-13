@@ -4,7 +4,7 @@
 Some laundromats allow you to retrieve the status of machines via their public gad.touchnpay.fr page.\
 This script is useful on weekends, especially if, like me, your residence has a laundromat with few machines and uses this web application.
 
-This script retrieves machines statuses through the API and, if needed, creates cron jobs to periodically check the status and send a discord notification when a machine is available.\ 
+This script retrieves machines statuses through the API and, if needed, creates cron jobs to periodically check the status and send a discord notification when a machine is available.\
 If a machine is available, a drop-down menu will be displayed. You can choose your machine after dropping off your laundry, then a new cronjob will be created to notify you when to pick up your laundry.  
 
 
